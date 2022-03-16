@@ -1,0 +1,14 @@
+version: '3'
+services:
+  sphinx-doc:
+    container_name: sphinx-doc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Asia/Tokyo
+    ports:
+      - 8800:80
+    volumes:
+      - ./docs:/docs
+      - ./debug:/debug
