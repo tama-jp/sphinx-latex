@@ -50,4 +50,4 @@ WORKDIR /docs
 
 EXPOSE 80
 
-CMD ["/bin/sh", "-c", "/util/run.sh"]
+ENTRYPOINT ["/bin/sh", "-c", "/util/run.sh"]
