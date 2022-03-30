@@ -30,6 +30,8 @@ RUN apt-get update \
 #RUN python3 -m pip install  myst-parser
 RUN pip install --upgrade myst-parser
 RUN pip install sphinx-rtd-theme
+RUN pip install sphinx-adc-theme
+RUN pip install sphinx-bootstrap-theme
 
 # ■ Apache
 ENV APACHE_DOCUMENT_ROOT /docs/build/html
