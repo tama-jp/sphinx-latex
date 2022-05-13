@@ -1,4 +1,4 @@
-FROM tamatan/go-python:v20220316-Python3.10-Go1.18
+FROM tamatan/go-python:v-gp-202205131200-g1.18.2-p3.10.4
 
 # Install Air
 RUN go install github.com/cosmtrek/air@latest
