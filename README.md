@@ -1,10 +1,15 @@
 # sphinx-latex
 
 ```
-v202207251900-g1.18.4-p3.10.5
+v202208221400-g1.19-p3.10.6-j11.0.16
 ```
 
 test
+```
+docker-compose up --build
+```
+
+
 
 ```
 docker-compose exec sphinx-doc /bin/sh
