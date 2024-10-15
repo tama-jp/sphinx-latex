@@ -29,9 +29,9 @@ jobs:
 
       - name: Determine Dockerfile based on Tag
         id: dockerfile
-#        run: |
-#          TAG=${{ github.ref_name }}
-#          DOCKERFILE=""
+        run: |
+          TAG=${{ github.ref_name }}
+          DOCKERFILE="Dockerfile"
 #          if [[ "$TAG" == v* ]]; then
 #            DOCKERFILE="sphinx-latex"
 #          else
@@ -44,8 +44,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-#          file: ${{ env.DOCKERFILE }}
-          file: Dockerfile
+          file: ${{ env.DOCKERFILE }}
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
