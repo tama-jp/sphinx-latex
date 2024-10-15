@@ -1,7 +1,7 @@
-FROM tamatan/go-python-java:v-gpj-202208221400-g1.19-p3.10.6-j11.0.16
+FROM ghcr.io/tama-jp/docker-language-programming:v-gpj-202410152200-g1.23.1-p3.12.6-j23-2024-09-17
 
 # Install Air
-RUN go install github.com/cosmtrek/air@latest
+RUN go install github.com/air-verse/air@latest
 
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
