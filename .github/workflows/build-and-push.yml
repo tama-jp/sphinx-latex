@@ -32,7 +32,7 @@ jobs:
         run: |
           TAG=${{ github.ref_name }}
           DOCKERFILE=""
-          if [[ "$TAG" == v-* ]]; then
+          if [[ "$TAG" == v* ]]; then
             DOCKERFILE="sphinx-latex"
           else
             echo "No matching Dockerfile for the tag $TAG"
