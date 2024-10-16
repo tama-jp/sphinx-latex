@@ -1,0 +1,12 @@
+services:
+  sphinx-doc:
+    container_name: sphinx-doc
+    image: ghcr.io/tama-jp/sphinx-latex:v202410170140-g1.23.1-p3.12.6-j23-2024-09-17
+    environment:
+      - TZ=Asia/Tokyo
+#    command: /bin/sh -c "while :; do sleep 10; done"
+    ports:
+      - 8800:80
+    volumes:
+      - ./docs:/docs
+      - ./debug:/debug

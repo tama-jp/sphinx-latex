@@ -1,12 +1,15 @@
 # sphinx-latex
 
 ```
-v202410152200-g1.23.1-p3.12.6-j23-2024-09-17
+v202410170140-g1.23.1-p3.12.6-j23-2024-09-17
 ```
 
 test
 ```
 docker-compose up --build
+
+docker-compose --file docker-compose_image.yml up --build
+
 ```
 
 
