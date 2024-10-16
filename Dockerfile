@@ -32,7 +32,8 @@ RUN pip install --upgrade myst-parser && \
     pip install sphinx-rtd-theme && \
     pip install sphinx-bootstrap-theme && \
     pip install sphinx-multiversion && \
-    pip install sphinxcontrib-plantuml
+    pip install sphinxcontrib-plantuml && \
+    pip install linkify-it-py
 
 # ■ Apache
 ENV APACHE_DOCUMENT_ROOT /docs/build/html
