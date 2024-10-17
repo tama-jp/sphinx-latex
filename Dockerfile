@@ -29,11 +29,11 @@ RUN apt-get update \
 
 #RUN python3 -m pip install  myst-parser
 RUN pip install --upgrade myst-parser --root-user-action=ignore && \
-    pip install sphinx-rtd-theme --root-user-action=ignore && \
-    pip install sphinx-bootstrap-theme --root-user-action=ignore && \
-    pip install sphinx-multiversion --root-user-action=ignore && \
-    pip install sphinxcontrib-plantuml --root-user-action=ignore && \
-    pip install linkify-it-py --root-user-action=ignore
+    pip install --upgrade sphinx-rtd-theme --root-user-action=ignore && \
+    pip install --upgrade sphinx-bootstrap-theme --root-user-action=ignore && \
+    pip install --upgrade sphinx-multiversion --root-user-action=ignore && \
+    pip install --upgrade sphinxcontrib-plantuml --root-user-action=ignore && \
+    pip install --upgrade linkify-it-py --root-user-action=ignore
 
 # ■ Apache
 ENV APACHE_DOCUMENT_ROOT /docs/build/html
