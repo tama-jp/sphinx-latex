@@ -28,12 +28,12 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 #RUN python3 -m pip install  myst-parser
-RUN pip install --upgrade myst-parser && \
-    pip install sphinx-rtd-theme && \
-    pip install sphinx-bootstrap-theme && \
-    pip install sphinx-multiversion && \
-    pip install sphinxcontrib-plantuml && \
-    pip install linkify-it-py
+RUN pip install --upgrade myst-parser --root-user-action=ignore && \
+    pip install sphinx-rtd-theme --root-user-action=ignore && \
+    pip install sphinx-bootstrap-theme --root-user-action=ignore && \
+    pip install sphinx-multiversion --root-user-action=ignore && \
+    pip install sphinxcontrib-plantuml --root-user-action=ignore && \
+    pip install linkify-it-py --root-user-action=ignore
 
 # ■ Apache
 ENV APACHE_DOCUMENT_ROOT /docs/build/html
