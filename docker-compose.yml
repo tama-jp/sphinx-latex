@@ -11,4 +11,5 @@ services:
       - 8800:80
     volumes:
       - ./docs:/docs
+      - ./tmp:/tmp
       - ./debug:/debug

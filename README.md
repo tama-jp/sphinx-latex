@@ -1,7 +1,7 @@
 # sphinx-latex
 
 ```
-v202410181230-g1.23.1-p3.12.6-j23-2024-09-17
+v202410191430-g1.23.1-p3.12.6-j23-2024-09-17
 ```
 
 test
@@ -21,16 +21,10 @@ docker-compose exec sphinx-doc /bin/sh
 ```
 sphinx-quickstart --sep -q -p ドキュメント -a non -v 1.0.0  -l ja . 
 
-sphinx-quickstart --sep -q -p RouteCodeSDK \
-                           -a "non" -v 1.0.0 \
-                           -r 1.0.0 \
-                           -l ja \
-                           --extensions myst_parser, \
-                           sphinx.ext.autodoc, \
-                           sphinx.ext.napoleon, \
-                           sphinx_rtd_theme, \
-                           sphinx_multiversion, \
-                           sphinxcontrib.plantuml .
-
+sphinx-quickstart --sep -q -p ドキュメント \
+                  -a "non" -v 1.0.0 \
+                  -r 1.0.0 \
+                  -l ja \
+                  --extensions myst_parser,sphinx.ext.autodoc,sphinx.ext.napoleon,sphinx_rtd_theme,sphinx_multiversion,sphinxcontrib.plantuml .
 
 ```
