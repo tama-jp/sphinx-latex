@@ -35,6 +35,12 @@ RUN pip install --upgrade myst-parser --root-user-action=ignore && \
     pip install --upgrade sphinxcontrib-plantuml --root-user-action=ignore && \
     pip install --upgrade linkify-it-py --root-user-action=ignore
 
+# PlantUMLのインストール
+RUN curl -L https://sourceforge.net/projects/plantuml/files/plantuml.jar/download -o /usr/local/bin/plantuml.jar && \
+    echo '#!/bin/sh\njava -jar /usr/local/bin/plantuml.jar "$@"' > /usr/local/bin/plantuml && \
+    chmod +x /usr/local/bin/plantuml
+
+
 # ■ Apache
 ENV APACHE_DOCUMENT_ROOT /docs/build/html
 

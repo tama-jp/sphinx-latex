@@ -20,7 +20,7 @@ bin =  "/bin/sh -c \"while :; do sleep 10; done\""
 # full_bin = "APP_ENV=dev APP_USER=air ./tmp/main"
 full_bin = "/bin/sh"
 # Watch these filename extensions.
-include_ext = ["md" , "rst"]
+include_ext = ["md" , "rst" , "puml"]
 
 # Ignore these filename extensions or directories.
 # exclude_dir = ["assets", "tmp", "vendor", "frontend/node_modules"]
