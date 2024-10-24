@@ -35,6 +35,24 @@ RUN pip install --upgrade myst-parser --root-user-action=ignore && \
     pip install --upgrade sphinxcontrib-plantuml --root-user-action=ignore && \
     pip install --upgrade linkify-it-py --root-user-action=ignore
 
+# フォントファイルを追加
+COPY SourceHanSansJP.zip /tmp/SourceHanSansJP.zip
+COPY NotoSansJP.zip /tmp/NotoSansJP.zip
+
+# 必要なパッケージをインストール
+RUN apt-get update \
+ && apt-get install --no-install-recommends -y \
+    fontconfig unzip && \
+    mkdir -p /usr/share/fonts/noto && \
+    unzip -o -d /usr/share/fonts/noto /tmp/NotoSansJP.zip && \
+    unzip -o -d /usr/share/fonts/noto /tmp/SourceHanSansJP.zip && \
+    chmod 644 /usr/share/fonts/noto/*.otf && \
+    fc-cache -fv
+
+
+# フォント設定ファイルを追加
+COPY local.conf /etc/fonts/local.conf
+
 # PlantUMLのインストール
 RUN curl -L https://sourceforge.net/projects/plantuml/files/plantuml.jar/download -o /usr/local/bin/plantuml.jar && \
     echo '#!/bin/sh\njava -jar /usr/local/bin/plantuml.jar "$@"' > /usr/local/bin/plantuml && \
