@@ -63,3 +63,6 @@ runner = "green"
 [misc]
 # Delete tmp directory on exit
 clean_on_exit = true
+
+force_polling = true
+poll_interval = 400  # ポーリング間隔を 1000 ミリ秒（1 秒）に設定
